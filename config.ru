@@ -1,2 +1,5 @@
 require './app'
-run SaucePotApp
+
+run Rack::URLMap.new(
+  '/thesaucepot' => SaucePotApp.new
+)
