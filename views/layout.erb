@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Rehearsal studios for bands, musicians, and recording artists">
+<meta name="keywords" content="rehearsal, studio, music, wordsauce, guitar, drums, bass, practice, spot, space, room, san luis obispo, central coast">
+<meta name="author" content="Wordsauce">
+<title><%=
+  if title == ''
+    'The Saucepot | Rehearsal Studios'
+  else
+    "#{title} | The Saucepot | Rehearsal Studios"
+  end
+%>
+</title>
+<link rel="shortcut icon" href="/images/favicon.ico"/>
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // ga('create', 'UA-43832123-1', 'wintersfear.com');
+  // ga('send', 'pageview');
+
+</script>
+
+
+<div class="wrapper">
+  <div class="header">
+    <a href="/"><img src="/images/saucepot-logo.png" alt="The Saucepot" class="logo"></a>
+  </div>
+  
+  <ul class="nav">
+    <li<%= ' class="current"' if request.path.start_with? "/locations" %>><a href="/locations">Locations</a></li>
+    <li<%= ' class="current"' if request.path.start_with? "/faq" %>><a href="/faq">FAQ</a></li>
+    <li<%= ' class="current"' if request.path.start_with? "/contact" %>><a href="/contact">Contact</a></li>
+  </ul>
+  
+  <div  class="content-wrap">
+  <% if hero != '' %>
+      <div class="hero"><img src="/images/hero-<%= hero %>.jpg"></div>
+  <% end %>
+    <div class="content">
+      <%= yield %>      
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <hr>
+    <p>Copyright &copy; <%= Date.today.year %> Wordsauce</p>
+  </div>
+</div>
+
+<script src="/js/jquery-1.9.0.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/scripts.js"></script>
+<script>
+  $(function() {
+    $('.gallery-item').fancybox({
+      maxWidth: 800,
+      padding: 30
+    });
+  });
+</script>
+
+</body>
+</html>
