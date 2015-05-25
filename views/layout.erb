@@ -37,9 +37,9 @@
   </div>
   
   <ul class="nav">
-    <li<%= ' class="current"' if request.path.start_with? "/locations" %>><a href="<%= url '/locations' %>">Locations</a></li>
-    <li<%= ' class="current"' if request.path.start_with? "/faq" %>><a href="<%= url '/faq' %>">FAQ</a></li>
-    <li<%= ' class="current"' if request.path.start_with? "/contact" %>><a href="<%= url '/contact' %>">Contact</a></li>
+    <li<%= ' class="current"' if request.path.include? "/locations" %>><a href="<%= url '/locations' %>">Locations</a></li>
+    <li<%= ' class="current"' if request.path.include? "/faq" %>><a href="<%= url '/faq' %>">FAQ</a></li>
+    <li<%= ' class="current"' if request.path.include? "/contact" %>><a href="<%= url '/contact' %>">Contact</a></li>
   </ul>
   
   <div  class="content-wrap">
