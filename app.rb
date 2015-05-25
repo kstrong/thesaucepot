@@ -24,10 +24,12 @@ class SaucePotApp < Sinatra::Base
   end
 
   post '/contact' do
-    Pony.mail to: settings.contact_to,
+    r = Pony.mail to: settings.contact_to,
               from: settings.contact_from,
               subject: 'Contact Form Submission',
-              body: erb(:email_template, layout: false)
+              body: erb(:email_template, layout: false),
+              via: :smtp,
+              via_options: settings.smtp_config
 
     erb :thank_you, locals: { title: 'Thank You!', hero: '' }
   end
