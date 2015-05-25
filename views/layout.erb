@@ -33,13 +33,13 @@
 
 <div class="wrapper">
   <div class="header">
-    <a href="/"><img src="/images/saucepot-logo.png" alt="The Saucepot" class="logo"></a>
+    <a href="<%= url '/' %>"><img src="/images/saucepot-logo.png" alt="The Saucepot" class="logo"></a>
   </div>
   
   <ul class="nav">
-    <li<%= ' class="current"' if request.path.start_with? "/locations" %>><a href="/locations">Locations</a></li>
-    <li<%= ' class="current"' if request.path.start_with? "/faq" %>><a href="/faq">FAQ</a></li>
-    <li<%= ' class="current"' if request.path.start_with? "/contact" %>><a href="/contact">Contact</a></li>
+    <li<%= ' class="current"' if request.path.start_with? "/locations" %>><a href="<%= url '/locations' %>">Locations</a></li>
+    <li<%= ' class="current"' if request.path.start_with? "/faq" %>><a href="<%= url '/faq' %>">FAQ</a></li>
+    <li<%= ' class="current"' if request.path.start_with? "/contact" %>><a href="<%= url '/contact' %>">Contact</a></li>
   </ul>
   
   <div  class="content-wrap">
