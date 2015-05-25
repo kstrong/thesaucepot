@@ -1,7 +1,11 @@
 require 'sinatra/base'
+require 'sinatra/config_file'
 require 'pony'
 
 class SaucePotApp < Sinatra::Base
+  register Sinatra::ConfigFile
+
+  config_file 'configuration.yml'
 
   get '/' do
     erb :home, locals: { title: '', hero: 'home' }
@@ -20,8 +24,8 @@ class SaucePotApp < Sinatra::Base
   end
 
   post '/contact' do
-    Pony.mail to: 'kvmstrong@gmail.com',
-              from: 'The Saucepot',
+    Pony.mail to: settings.contact_to,
+              from: settings.contact_from,
               subject: 'Contact Form Submission',
               body: erb(:email_template, layout: false)
 
