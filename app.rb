@@ -26,6 +26,7 @@ class SaucePotApp < Sinatra::Base
   post '/contact' do
     Pony.mail to: settings.contact_to,
               from: settings.contact_from,
+              reply_to: params[:email],
               subject: 'Contact Form Submission',
               body: erb(:email_template, layout: false),
               via: :smtp,
