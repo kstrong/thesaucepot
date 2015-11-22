@@ -34,9 +34,8 @@
       <h2>Gallery</h2>
       
       <div class="gallery">
-        <a href="<%= url '/images/locations/gallery/01-large.jpg' %>" class="gallery-item" rel="gallery"><img src="<%= url '/images/locations/gallery/01-small.jpg' %>"></a>
-        <a href="<%= url '/images/locations/gallery/02-large.jpg' %>" class="gallery-item" rel="gallery"><img src="<%= url '/images/locations/gallery/02-small.jpg' %>"></a>
-        <a href="<%= url '/images/locations/gallery/03-large.jpg' %>" class="gallery-item" rel="gallery"><img src="<%= url '/images/locations/gallery/03-small.jpg' %>"></a>
-        <a href="<%= url '/images/locations/gallery/04-large.jpg' %>" class="gallery-item" rel="gallery"><img src="<%= url '/images/locations/gallery/04-small.jpg' %>"></a>
-        <a href="<%= url '/images/locations/gallery/05-large.jpg' %>" class="gallery-item" rel="gallery"><img src="<%= url '/images/locations/gallery/05-small.jpg' %>"></a>        <div class="clear"></div>
+        <% ['01', '02', '03', '04', '05', '11', '12', '13', '14', '15'].each do |image_index| %>
+        <a href="<%= url "/images/locations/gallery/#{image_index}-large.jpg" %>" class="gallery-item" rel="gallery"><img src="<%= url "/images/locations/gallery/#{image_index}-small.jpg" %>"></a>
+        <% end %>
+        <div class="clear"></div>
       </div>
