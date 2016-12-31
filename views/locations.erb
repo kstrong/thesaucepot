@@ -1,5 +1,5 @@
       <h1><%= title %></h1>
-            
+
       <hr>
       <div class="left-col">
         <img src="<%= url '/images/locations/floorplan-slo1.png' %>">
@@ -40,15 +40,14 @@
         <p>245 Tank Farm Road, Unit K<br />
           San Luis Obispo, CA 93401
         </p>
-        <p><em>***Opening August 2016***</em></p>
         <p><a href="https://www.google.com/maps/place/245+Tank+Farm+Rd,+San+Luis+Obispo,+CA+93401/@35.246459,-120.6657703,17z/data=!3m1!4b1!4m2!3m1!1s0x80ecf72aaadd2561:0x47561b1033f5cdcc" target="_blank">View Map</a></p>
       </div>
 
       <div class="clear"></div>
       <hr>
-    
+
       <h2>Gallery</h2>
-      
+
       <div class="gallery">
         <% ['01', '02', '03', '04', '05', '11', '12', '13', '14', '15'].each do |image_index| %>
         <a href="<%= url "/images/locations/gallery/#{image_index}-large.jpg" %>" class="gallery-item" rel="gallery"><img src="<%= url "/images/locations/gallery/#{image_index}-small.jpg" %>"></a>
