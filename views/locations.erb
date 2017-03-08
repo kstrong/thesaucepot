@@ -1,5 +1,6 @@
       <h1><%= title %></h1>
-
+<%
+=begin %>
       <hr>
       <div class="left-col">
         <img src="<%= url '/images/locations/floorplan-slo1.png' %>">
@@ -30,13 +31,14 @@
 
       <div class="clear"></div>
       <hr>
-
+<%
+=end %>
       <div class="left-col">
         <img src="<%= url '/images/locations/floorplan-slo3.png' %>">
       </div>
 
       <div class="right-col column" id="slo3">
-        <h2>San Luis Obispo #3</h2>
+        <h2>San Luis Obispo <%# #3 %></h2>
         <p>245 Tank Farm Road, Unit K<br />
           San Luis Obispo, CA 93401
         </p>
@@ -45,7 +47,8 @@
 
       <div class="clear"></div>
       <hr>
-
+<%
+=begin %>
       <h2>Gallery</h2>
 
       <div class="gallery">
@@ -54,3 +57,5 @@
         <% end %>
         <div class="clear"></div>
       </div>
+<%
+=end %>
