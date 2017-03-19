@@ -23,8 +23,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -35,7 +35,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -228,10 +228,20 @@ h3 {
 	color: #609519;
 	margin-bottom: 5px;
 }
+
+h4 {
+	padding: 0 0 5px;
+	margin-right: 10px;
+	color: #609519;
+	font-size: 14px;
+	font-weight: bold;
+}
+
 p {
 	margin-bottom: 30px;
 }
 p,
+pre,
 .content ul,
 .content ol,
 .content table,
@@ -402,7 +412,7 @@ input[type="submit"] {
 	-webkit-text-shadow: #000 0 1px 0px;
 	-moz-text-shadow: #000 0 1px 0px;
 	text-shadow: #000 0 1px 0px;
-	
+
 }
 input[type="submit"]:hover,
 input[type="submit"]:focus {

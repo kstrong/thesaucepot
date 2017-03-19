@@ -47,15 +47,16 @@
 
       <div class="clear"></div>
       <hr>
-<%
-=begin %>
+
       <h2>Gallery</h2>
 
       <div class="gallery">
-        <% ['01', '02', '03', '04', '05', '11', '12', '13', '14', '15'].each do |image_index| %>
+        <%
+        #images = ['01', '02', '03', '04', '05', '11', '12', '13', '14', '15']
+        #images = ['300', '301', '302', '303', '304', '305', '306', '307', '308', '309', '310', '311']
+        images = ['300', '301', '302', '303', '304', '306', '307', '308', '309', '310']
+        images.each do |image_index| %>
         <a href="<%= url "/images/locations/gallery/#{image_index}-large.jpg" %>" class="gallery-item" rel="gallery"><img src="<%= url "/images/locations/gallery/#{image_index}-small.jpg" %>"></a>
         <% end %>
         <div class="clear"></div>
       </div>
-<%
-=end %>

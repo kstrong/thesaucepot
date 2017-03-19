@@ -35,19 +35,20 @@
   <div class="header">
     <a href="<%= url '/' %>"><img src="<%= url '/images/saucepot-logo.png' %>" alt="The Saucepot" class="logo"></a>
   </div>
-  
+
   <ul class="nav">
     <li<%= ' class="current"' if request.path.include? "/locations" %>><a href="<%= url '/locations' %>">Locations</a></li>
+    <li<%= ' class="current"' if request.path.include? "/studio" %>><a href="<%= url '/studio' %>">Studio</a></li>
     <li<%= ' class="current"' if request.path.include? "/faq" %>><a href="<%= url '/faq' %>">FAQ</a></li>
     <li<%= ' class="current"' if request.path.include? "/contact" %>><a href="<%= url '/contact' %>">Contact</a></li>
   </ul>
-  
+
   <div  class="content-wrap">
   <% if hero != '' %>
       <div class="hero"><img src="<%= url "/images/hero-#{hero}.jpg" %>"></div>
   <% end %>
     <div class="content">
-      <%= yield %>      
+      <%= yield %>
       <div class="clear"></div>
     </div>
   </div>

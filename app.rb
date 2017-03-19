@@ -11,6 +11,10 @@ class SaucePotApp < Sinatra::Base
     erb :home, locals: { title: '', hero: 'home' }
   end
 
+  get '/studio' do
+    erb :studio, locals: { title: 'Sauce Pot Recording Studio', hero: '' }
+  end
+
   get '/faq' do
     erb :faq, locals: { title: 'FAQ', hero: '' }
   end
