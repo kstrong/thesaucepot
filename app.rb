@@ -8,7 +8,7 @@ class SaucePotApp < Sinatra::Base
   config_file 'configuration.yml'
 
   get '/' do
-    erb :home, locals: { title: '', hero: 'home' }
+    erb :home, locals: { title: '', hero: 'studio' }
   end
 
   get '/studio' do
